@@ -1,16 +1,13 @@
 import loadInput from "../../util/loadInput.mjs";
 
-const calorieCounting = async () => {
-
+async function getSortedTotals() {
     const calories = (await loadInput('./src/advent/day01/input.txt')).split('\n');
-    let highestCalories = 0;
     let currentCount = 0;
+    const totals = [];
 
     for (const calorie of calories) {
         if (calorie === '') {
-            if (currentCount > highestCalories) {
-                highestCalories = currentCount;
-            }
+            totals.push(currentCount);
 
             currentCount = 0;
 
@@ -20,8 +17,19 @@ const calorieCounting = async () => {
         currentCount += parseInt(calorie);
     }
 
+    totals.sort((a, b) => b - a);
 
-    return highestCalories;
+    return totals;
 }
 
-export default calorieCounting;
+export const calorieCountingPt1 = async () => {
+    const totals = await getSortedTotals();
+
+    return totals[0];
+}
+
+export const calorieCountingPt2 = async () => {
+    const totals = await getSortedTotals();
+
+    return totals[0] + totals[1] + totals[2];
+}
