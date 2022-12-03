@@ -1,0 +1,25 @@
+{
+  "name": "advent-of-code-2022",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel ./src -d lib",
+    "all": "ts-node ./src/app.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Jaaromy/advent-of-code-2022.git"
+  },
+  "author": "Jaaromy Zierse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jaaromy/advent-of-code-2022/issues"
+  },
+  "homepage": "https://github.com/Jaaromy/advent-of-code-2022#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
