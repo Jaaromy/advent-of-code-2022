@@ -6,8 +6,7 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel ./src -d lib",
-    "all": "ts-node ./src/app.ts"
+    "all": "node ./src/app.js"
   },
   "repository": {
     "type": "git",
